@@ -1,23 +1,23 @@
 <?php
 if (isset($_POST['btn_enviar'])) {
-    $username = $_POST['username'];
+    $correo = $_POST['correo'];
     $password = $_POST['password'];
 
     // Función para validar las credenciales en la base de datos
-    function validarCredenciales($username, $password, $conexion) {
+    function validarCredenciales($correo, $password, $conexion) {
         // Escapar caracteres especiales para prevenir inyección de SQL
-        $username = mysqli_real_escape_string($conexion, $username);
+        $correo = mysqli_real_escape_string($conexion, $correo);
         $password = mysqli_real_escape_string($conexion, $password);
 
         // Consulta para verificar las credenciales en la tabla "usuarios"
-        $consulta = "SELECT * FROM usuarios02 WHERE username = '$username' AND password = '$password'";
+        $consulta = "SELECT * FROM usuarios WHERE CorreoElectronico = '$correo' AND password = '$password'";
         $resultado = mysqli_query($conexion, $consulta);
 
         if (mysqli_num_rows($resultado) == 1) {
             // Las credenciales son válidas
             session_start();
             $_SESSION['loggedIn'] = true;
-            $_SESSION['username'] = $username;
+            $_SESSION['correo'] = $correo;
 
 
             // Redirigir al usuario a "ingresar.php"
@@ -30,6 +30,6 @@ if (isset($_POST['btn_enviar'])) {
     }
 
     // Llamada a la función para validar las credenciales
-    validarCredenciales($username, $password, $conexion);
+    validarCredenciales($correo, $password, $conexion);
 }
 ?>

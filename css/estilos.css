@@ -1,0 +1,342 @@
+/*body*/
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    box-sizing: inherit;
+    background: rgb(219, 218, 218);
+    background: linear-gradient(90deg, rgba(219, 218, 218, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(219, 218, 218, 1) 100%);
+}
+
+main {
+    padding-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+
+main {
+    font-size: 22px;
+    margin: 20px auto;
+}
+
+form {
+    text-align: left;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.elemento_formulario {
+    margin-bottom: 15px;
+}
+
+label {
+    text-align: center;
+}
+
+#genero {
+    cursor: pointer;
+    width: 463px;
+    color: #535252f6;
+}
+
+
+input[type="text"],
+input[type="file"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
+#boton_enviar:hover {
+    background-color: #972723;
+}
+
+#boton_enviar {
+    padding: 10px;
+    background-color: #c52620;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 150px;
+    margin: 20px auto 0;
+}
+
+
+main a {
+    text-decoration: none;
+    color: #c52620;
+}
+
+main a:hover {
+    opacity: 0.8;
+
+}
+
+.registrada {
+    color: rgb(253, 0, 51);
+}
+
+.no_registrada {
+    color: rgb(42, 193, 42);
+}
+
+
+
+/*Header*/
+
+.contenedor_log {
+    margin: 10px auto 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 44px;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px 80px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/*Footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    left: 0;
+    bottom: 10px;
+}
+
+footer p {
+    font-size: 0.85em;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+footer #pie:hover {
+    opacity: 0.8;
+}
+
+
+/*Resultados*/
+
+main h3 {
+    margin-bottom: 12px;
+}
+
+.resultado {
+    color: #c52620;
+}
+
+
+.titulo a {
+    color: #c52620;
+}
+
+.titulo a:hover {
+    opacity: 0.8;
+}
+
+#tabla_directores {
+    width: 300px;
+}
+
+#tabla_directores li p {
+    padding-left: 10px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    width: 30%;
+    text-align: center;
+}
+
+.flecha {
+    height: 45px;
+}
+
+.flecha:hover {
+    opacity: 0.6;
+}
+
+.director {
+    color: #c52620;
+}
+
+
+/*Antonio Garcia*/
+
+#antoniogarcia h1 {
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+#antoniogarcia nav {
+    font-size: 24px;
+}
+
+#antoniogarcia a:hover {
+    opacity: 0.8;
+}
+
+
+#biblioteca a {
+    color: #5d55d1;
+}
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    row-gap: 40px;
+    text-align: center;
+}
+
+
+/*Tabla*/
+
+.table {
+    width: 58%;
+    border-collapse: collapse;
+}
+
+.table tr th{
+    vertical-align: middle;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid rgb(170, 167, 167);
+    vertical-align: middle;
+}
+
+.table th {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+.table tr:hover {
+    background-color: #e6e6e6;
+}
+
+.table td:first-child {
+    text-align: left;
+    padding-left: 15px;
+}
+
+
+/**/
+
+#lista_directores .table {
+    width: 15%;
+    border-collapse: collapse;
+}
+
+#lista_directores.table th,
+.table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid rgb(170, 167, 167);
+    ;
+}
+
+#lista_directores .table th {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+
+#lista_directores .table tr:hover {
+    background-color: #e6e6e6;
+}
+
+#lista_directores .table td:first-child {
+    text-align: center;
+    padding-left: 15px;
+}
+
+
+.login {
+    padding-top: 35px;
+}
+
+
+.nombre {
+    color: #5d55d1;
+}
+
+
+.login2 {
+    font-size: 12px;
+}
+
+.elemento_genero {
+    width: 1000px
+}
+
+.formulario_nombre {
+    display: flex;
+    flex-wrap: wrap;
+    width: 473px;
+}
+
+.formulario_nombre input {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.fichero {
+    color: rgb(65, 65, 65);
+}
+
+ul li {
+    list-style: none;
+}
