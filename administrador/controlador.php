@@ -24,7 +24,7 @@ if (isset($_POST['btn_enviar'])) {
                 $_SESSION['correo'] = $correo;
 
                 // Redirigir al usuario a "panel_administrador.php" (por ejemplo)
-                header("Location: panel_administrador.php");
+                header("Location: panel_admin.php");
                 exit(); // Importante: asegúrate de salir del script después de redirigir
             } else {
                 // El usuario no es administrador, mostrar mensaje de error

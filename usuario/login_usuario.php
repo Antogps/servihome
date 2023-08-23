@@ -20,11 +20,11 @@
             <h1 class="titulo"><a href="">ServiHome</a></h1>
         </header>
         <form id="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-            <input class="elemento_formulario" placeholder="Correo de Administrador" type="text" id="correo" name="correo" required>
+            <input class="elemento_formulario" placeholder="Correo de usuario" type="text" id="correo" name="correo" required>
             <input class="elemento_formulario" placeholder="Contraseña" type="password" id="password" name="password" required>
             <input class="elemento_formulario" type="submit" value="Iniciar sesión" id="boton_enviar" name="btn_enviar">
         </form>
-        <?php include "controlador.php"; ?>
+        <?php include "controlador_usuario.php"; ?>
         <?php include '../includes/footer.php'; ?>
     </main>   
 </body>
