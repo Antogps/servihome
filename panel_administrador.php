@@ -17,14 +17,14 @@
 <body>
     <main>
         <header>
-            <h1 class="titulo"><a href="ingresar.php">ServiHome</a></h1>
+            <h1 class="titulo"><a href="">ServiHome</a></h1>
         </header>
         <h2>Panel de administrador</h2>
         <ul>
             <li><a href="funciones/crear.php">Crear usuarios</a></li>
+            <li><a href="funciones/eliminar.php">Eliminar usuarios</a></li>
             <li><a href="funciones/editar.php">Editar peticiones</a></li>
             <li><a href="funciones/consultar.php">Consultar peticiones</a></li>
-            <li><a href="funciones/eliminar.php">Eliminar peticiones</a></li>
         </ul>
 
         <?php include "controlador.php"; ?>

@@ -16,6 +16,10 @@
 
 <body>
     <main>
+    <header>
+            <h1 class="titulo"><a href="ingresar.php">ServiHome</a></h1>
+        </header>
+
         <h2>Crear Usuario</h2>
         <form id="formulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <input class="elemento_formulario" placeholder="Nombre" type="text" id="nombre" name="nombre" required>
@@ -35,25 +39,36 @@
             <input class="elemento_formulario" type="submit" value="Crear Usuario" id="boton_enviar" name="btn_enviar">
         </form>
         <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $nombre = $_POST["nombre"];
-                $apellidos = $_POST["apellidos"];
-                $empresa = $_POST["empresa"];
-                $correo = $_POST["correo"];
-                $rol = $_POST["rol"];
-                $ubicacion = $_POST["ubicacion"];
-            
-            
-                // Realizar la inserción en la base de datos
-                $sql = "INSERT INTO usuarios (Nombre, Apellidos, Empresa, CorreoElectronico, Rol, Ubicacion, ) 
-                        VALUES ('$nombre', '$apellidos', '$empresa', '$correo', '$rol', '$ubicacion')";
-
-                if ($conexion->query($sql) === TRUE) {
-                    $success_message = "Usuario creado exitosamente.";
-                } else {
-                    $error_message = "Error al crear el usuario: " . $conexion->error;
+            function generarContrasena($longitud) {
+                $caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                $contrasena = "";
+                for ($i = 0; $i < $longitud; $i++) {
+                    $index = rand(0, strlen($caracteres) - 1);
+                    $contrasena .= $caracteres[$index];
                 }
+                return $contrasena;
             }
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $nombre = $_POST["nombre"];
+                    $apellidos = $_POST["apellidos"];
+                    $empresa = $_POST["empresa"];
+                    $correo = $_POST["correo"];
+                    $rol = $_POST["rol"];
+                    $ubicacion = $_POST["ubicacion"];
+                
+                    $longitudContrasena = 10; 
+                    $contrasena = generarContrasena($longitudContrasena);
+            
+                    // Realizar la inserción en la base de datos
+                    $sql = "INSERT INTO usuarios (Nombre, Apellidos, Empresa, CorreoElectronico, Rol, Ubicacion, Contrasena) 
+                            VALUES ('$nombre', '$apellidos', '$empresa', '$correo', '$rol', '$ubicacion', '$contrasena')";
+            
+                    if ($conexion->query($sql) === TRUE) {
+                        $success_message = "Usuario creado exitosamente. Contraseña: $contrasena";
+                    } else {
+                        $error_message = "Error al crear el usuario: " . $conexion->error;
+                    }
+                }
         ?>
 
 
