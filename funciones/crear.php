@@ -66,7 +66,7 @@
                     if ($conexion->query($sql) === TRUE) {
                         $success_message = "Usuario creado exitosamente. Contraseña: $contrasena";
                     } else {
-                        $error_message = "Error al crear el usuario: " . $conexion->error;
+                        /*$error_message = "Error al crear el usuario: " . $conexion->error;*/
                     }
                 }
         ?>
